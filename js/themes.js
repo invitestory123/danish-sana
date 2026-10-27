@@ -1,4 +1,14 @@
 window.INVITATION_THEMES = {
+  "royal-rose": {
+    "slug": "royal-rose",
+    "name": "Royal Rose",
+    "palette": "warm ivory, royal crimson, antique gold, soft blush",
+    "flower": "lush royal red and blush roses with antique gold foliage",
+    "scene": "a romantic palace pavilion with elegant arches, royal crimson roses and golden vines, candlelight, luminous twilight",
+    "paper": "#faf5f0",
+    "ink": "#381720",
+    "accent": "#7d192e"
+  },
   "aubergine-magnolia": {
     "slug": "aubergine-magnolia",
     "name": "Magnolia Reverie",

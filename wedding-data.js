@@ -1,7 +1,7 @@
 // Edit names, event details, and optional media paths here.
 // Media paths are relative to this template's index.html.
 window.WEDDING_DATA = {
-  "theme": "petrol-dahlia",
+  "theme": "royal-rose",
   "couple": {
     "first": "Danish",
     "second": "Sana",
