@@ -46,21 +46,15 @@ window.WEDDING_DATA = {
     "address": "Bailey Rd, opp. CISRO Hospital, near Saguna More, Shri Krishna Puram, Patna, Bihar 801503",
     "mapsUrl": "https://maps.app.goo.gl/5qRPxVA8zGQNAUM49?g_st=ic",
     "timeLabel": "Monday, 21 December · 7:00 PM onwards",
-    "sceneCaption": "Shangri-La Palace, Bailey Road, Patna",
-    "note": "Opposite CISRO Hospital, near Saguna More. We look forward to welcoming you."
+    "sceneCaption": "",
+    "note": ""
   },
   "details": {
-    "dressCode": "Traditional / Formal evening attire. Come dressed in your festive best.",
+    "dressCode": "",
     "giftPreference": "Your warm presence and heartfelt prayers are our most treasured gifts."
   },
-  // Add the host's email address to enable the RSVP button.
-  "rsvp": {
-    "email": "",
-    "heading": "Warmly Awaiting You",
-    "note": "Your presence and prayers would make our day even more special. Please let us know if you can join us.",
-    "deadline": ""
-  },
   "media": {
+    "invitationCard": "./assets/invitation-card.png",
     "openingVideo": "./media/opening.mp4",
     "openingPoster": "./media/opening-poster.webp",
     "heroVideo": "./media/hero.mp4",
