@@ -28,31 +28,53 @@
         <video class="hero-video" id="hero-video" muted loop playsinline preload="none" hidden></video>
         <div class="hero-copy"><p class="occasion">${text(data.wedding.occasion || 'The wedding celebration of')}</p><p class="date">${text(data.wedding.dateLabel)}</p>
           <h1 class="names" id="names" tabindex="-1"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></h1>
-          <p class="hero-note">${text(data.couple.heroNote)}</p><a class="hero-link" href="#our-invitation">With love, you are invited</a>
+          <p class="hero-note">${text(data.couple.heroNote)}</p><a class="hero-link" href="#our-invitation">You are cordially invited</a>
         </div>
       </section>
       <section class="paper-section floral intro" id="our-invitation" aria-label="Our invitation">
         ${data.wedding.blessing ? `<p class="blessing reveal" dir="rtl">${text(data.wedding.blessing)}</p>` : ''}
         ${data.wedding.blessingTranslation ? `<p class="blessing-trans reveal">${text(data.wedding.blessingTranslation)}</p>` : ''}
-        ${(data.couple.groomParents || data.couple.brideParents) ? `
+        ${data.wedding.elders ? `
+        <div class="elders-intro reveal">
+          <p class="elders-lead">${text(data.wedding.eldersNote || 'The family of')}</p>
+          <h3 class="elders-names">${text(data.wedding.elders)}</h3>
+        </div>
+        ` : ''}
+        ${(data.couple.groomParents || data.couple.brideParents || data.couple.groomParentsNames) ? `
         <div class="family-intro reveal">
-          <p class="family-honorific">${text(data.wedding.familyNote || 'Together with our families')}</p>
-          <div class="couple-parents-grid">
-            <div class="family-side">
-              <h3 class="member-name">${text(data.couple.groomFull || data.couple.first)}</h3>
-              <p class="member-parentage">${text(data.couple.groomParents || '')}</p>
+          <p class="family-honorific">${text(data.wedding.familyNote || 'Invited by the Parents')}</p>
+          <div class="parents-inviting-grid">
+            <div class="parent-side">
+              <h3 class="parent-name">${text(data.couple.groomParentsNames || data.couple.groomParents || '')}</h3>
+              <p class="parent-role">Parents of Groom</p>
             </div>
             <div class="family-conjunction" aria-hidden="true"><i>&amp;</i></div>
-            <div class="family-side">
-              <h3 class="member-name">${text(data.couple.brideFull || data.couple.second)}</h3>
+            <div class="parent-side">
+              <h3 class="parent-name">${text(data.couple.brideParentsNames || data.couple.brideParents || '')}</h3>
+              <p class="parent-role">Parents of Bride</p>
+            </div>
+          </div>
+          <p class="invitation-request">${text(data.wedding.invitationRequest || 'request the honour of your presence at the Reception of')}</p>
+          <div class="honored-couple-grid">
+            <div class="couple-side">
+              <h2 class="script couple-honor-name">${text(data.couple.groomFull || data.couple.first)}</h2>
+              <p class="member-parentage">${text(data.couple.groomParents || '')}</p>
+            </div>
+            <p class="couple-conjunction" aria-label="with">with</p>
+            <div class="couple-side">
+              <h2 class="script couple-honor-name">${text(data.couple.brideFull || data.couple.second)}</h2>
               <p class="member-parentage">${text(data.couple.brideParents || '')}</p>
             </div>
+          </div>
+          <div class="invitation-programme-box">
+            <p class="programme-date">on ${text(data.wedding.longDate)}</p>
+            ${data.wedding.programmeNote ? `<p class="programme-note">${text(data.wedding.programmeNote)}</p>` : ''}
           </div>
         </div>
         ` : ''}
         <div class="rule" aria-hidden="true"></div>
-        <h2 class="script reveal">${text(data.couple.subtitle)}</h2>
-        <p class="reveal">${text(data.wedding.salutation)}</p><p class="invitation-note reveal">${text(data.wedding.invitationNote)}</p>
+        <p class="reveal salutation-heading">${text(data.wedding.salutation)}</p>
+        <p class="invitation-note reveal">${text(data.wedding.invitationNote)}</p>
       </section>
       <section class="paper-section countdown-section torn" aria-labelledby="countdown-title"><h2 class="script" id="countdown-title">${text(data.wedding.countdownTitle || 'Until our celebration begins')}</h2>
         <div class="countdown" id="countdown" role="timer" aria-label="Time until the wedding"><div><strong data-count="days">00</strong><span>Days</span></div><div><strong data-count="hours">00</strong><span>Hours</span></div><div><strong data-count="minutes">00</strong><span>Minutes</span></div><div><strong data-count="seconds">00</strong><span>Seconds</span></div></div><p class="countdown-note" id="countdown-note">${text(data.wedding.longDate)}</p>
@@ -63,7 +85,7 @@
       ${data.media.invitationCard ? `
       <section class="paper-section floral card-section" aria-label="Wedding Invitation Card">
         <div class="invitation-card-wrapper reveal">
-          <img class="invitation-card-img" src="${text(safeURL(data.media.invitationCard))}" alt="Nikah Ceremony Invitation Card" loading="lazy">
+          <img class="invitation-card-img" src="${text(safeURL(data.media.invitationCard))}" alt="Wedding Reception Invitation Card" loading="lazy">
         </div>
       </section>
       ` : ''}
@@ -71,10 +93,11 @@
         <div class="closing-scene">
           <img class="closing-art" src="${data.media.heroPoster ? text(safeURL(data.media.heroPoster)) : asset('hero-first.webp')}" alt="" width="720" height="1280" loading="lazy" decoding="async">
           <div class="closing-copy reveal">
-            <p class="closing-eyebrow">The beginning of our forever</p>
-            <h2 class="closing-title" id="closing-title">With all<br><em>our love</em></h2>
+            <p class="closing-eyebrow">With warm blessings &amp; prayers</p>
+            <h2 class="closing-title" id="closing-title">Awaiting your<br><em>gracious presence</em></h2>
             <div class="closing-rule" aria-hidden="true"></div>
             <p class="closing-names"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></p>
+            ${(data.couple.groomParentsNames || data.couple.brideParentsNames) ? `<p class="closing-parents">${text(data.couple.groomParentsNames || '')} &amp; ${text(data.couple.brideParentsNames || '')}</p>` : ''}
             <p class="closing-date">${text(data.wedding.dateLabel)}</p>
           </div>
         </div>

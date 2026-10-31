@@ -6,26 +6,32 @@ window.WEDDING_DATA = {
     "first": "Danish",
     "second": "Sana",
     "groomFull": "Danish Raza Khan",
-    "brideFull": "Sana Fatma",
-    "groomParents": "S/o Sajid Raza Khan & Farha Khan",
-    "brideParents": "D/o Md. Nasim Khan & Syeada Fatma",
-    "heroNote": "Together with our families",
-    "subtitle": "Two hearts joined in love & faith"
+    "brideFull": "Sana Fatima",
+    "groomParents": "son of Farha & Sajid Raza Khan",
+    "brideParents": "daughter of Md Nasim Khan & Syeda Fatima",
+    "groomParentsNames": "Farha & Sajid Raza Khan",
+    "brideParentsNames": "Md Nasim Khan & Syeda Fatima",
+    "heroNote": "Invited with love by Farha & Sajid Raza Khan and Md Nasim Khan & Syeda Fatima",
+    "subtitle": "In sha Allah · as per programme"
   },
   "wedding": {
-    "occasion": "The wedding celebration of",
+    "occasion": "The Wedding Reception of",
     "dateLabel": "21 · 12 · 2026",
     "longDate": "Monday, 21 December 2026",
     "dateISO": "2026-12-21T19:00:00+05:30",
     "endISO": "2026-12-21T23:30:00+05:30",
     "salutation": "Dear Family & Friends,",
-    "invitationNote": "With the grace of Almighty Allah, we cordially invite you to share in the joy of our Wedding Reception. Your gracious presence, love, and prayers will make our celebrations truly blessed and memorable.",
+    "invitationNote": "With the grace of Almighty Allah, we cordially invite you to share in the joy and blessings of the Wedding Reception of our beloved children Danish Raza Khan and Sana Fatima. Your gracious presence, heartfelt prayers, and warm wishes will make our celebration truly blessed and memorable.",
     "scheduleTitle": "Wedding Celebrations",
-    "scheduleNote": "All times are local to the venue. Valet parking is available.",
-    "countdownTitle": "Until our celebration begins",
+    "scheduleNote": "All times are local to the venue. In sha Allah, as per programme.",
+    "countdownTitle": "Until the celebration begins",
     "blessing": "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
-    "blessingTranslation": "In the name of Allah, the Most Gracious, the Most Merciful",
-    "familyNote": "Together with our families"
+    "blessingTranslation": "In the name of Allah, the most merciful & beneficent",
+    "elders": "Mehrunnisa Khanam & Ahmad Raza Khan",
+    "eldersNote": "The family of",
+    "invitationRequest": "request the honour of your presence at the Reception of",
+    "familyNote": "Invited by the Parents of Bride & Groom",
+    "programmeNote": "In sha Allah · as per programme"
   },
   "schedule": [
     {
