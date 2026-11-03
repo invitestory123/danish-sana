@@ -5,3 +5,4 @@
 @font-face{font-family:"Cormorant Garamond";src:url("../fonts/Cormorant-Semibold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
 
 @font-face{font-family:"Imperial Script";src:url("../fonts/ImperialScript.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Edwardian Script ITC";src:local("ITC Edwardian Script"),local("Edwardian Script ITC"),url("../fonts/EdwardianScriptITC.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}

@@ -13,7 +13,7 @@
   const text = escape;
   const date = new Date(data.wedding.dateISO);
   const validDate = !Number.isNaN(date.getTime());
-  document.title = `${data.couple.first} & ${data.couple.second} | Wedding Celebration`;
+  document.title = `${data.couple.first} & ${data.couple.second} | Wedding Reception Invitation`;
   document.querySelector('#app').innerHTML = `
     <div class="entrance" id="entrance">
       <img class="envelope" src="${data.media.openingPoster ? text(safeURL(data.media.openingPoster)) : asset('envelope-first.webp')}" alt="${text(theme.name)} floral embossed envelope with a wax seal" fetchpriority="high">
@@ -28,7 +28,7 @@
         <video class="hero-video" id="hero-video" muted loop playsinline preload="none" hidden></video>
         <div class="hero-copy"><p class="occasion">${text(data.wedding.occasion || 'The wedding celebration of')}</p><p class="date">${text(data.wedding.dateLabel)}</p>
           <h1 class="names" id="names" tabindex="-1"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></h1>
-          <p class="hero-note">${text(data.couple.heroNote)}</p>
+          ${data.couple.heroNote ? `<p class="hero-note">${text(data.couple.heroNote)}</p>` : ''}
         </div>
       </section>
       <section class="paper-section floral intro" id="our-invitation" aria-label="Our invitation">
@@ -54,10 +54,6 @@
               <p class="member-parentage">${text(data.couple.brideParents || '')}</p>
             </div>
           </div>
-          <div class="invitation-programme-box">
-            <p class="programme-date">on ${text(data.wedding.longDate)}</p>
-            ${data.wedding.programmeNote ? `<p class="programme-note">${text(data.wedding.programmeNote)}</p>` : ''}
-          </div>
         </div>
         ` : ''}
         <div class="rule" aria-hidden="true"></div>
@@ -67,8 +63,28 @@
       <section class="paper-section countdown-section torn" aria-labelledby="countdown-title"><h2 class="script" id="countdown-title">${text(data.wedding.countdownTitle || 'Until our celebration begins')}</h2>
         <div class="countdown" id="countdown" role="timer" aria-label="Time until the wedding"><div><strong data-count="days">00</strong><span>Days</span></div><div><strong data-count="hours">00</strong><span>Hours</span></div><div><strong data-count="minutes">00</strong><span>Minutes</span></div><div><strong data-count="seconds">00</strong><span>Seconds</span></div></div><p class="countdown-note" id="countdown-note">${text(data.wedding.longDate)}</p>
       </section>
-      <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>`<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name">${text(event.title)}</span></li>`).join('')}</ol><p class="schedule-note">${text(data.wedding.scheduleNote)}</p></section>
-      <section class="paper-section venue-section torn" aria-labelledby="venue-title"><h2 class="script reveal" id="venue-title">Where we celebrate</h2><img class="venue-scene reveal" src="${asset('hero-first.webp')}" alt="" loading="lazy">${data.venue.sceneCaption ? `<p class="venue-caption">${text(data.venue.sceneCaption)}</p>` : ''}<div class="location-frame reveal"><h3 class="venue-name">${text(data.venue.name)}</h3><div class="rule" aria-hidden="true"></div><address class="venue-address">${text(data.venue.address)}</address><p>${text(data.venue.timeLabel)}</p><div class="actions"><a class="action" id="maps" target="_blank" rel="noopener noreferrer">Open in maps</a><button class="action secondary" id="calendar">Add to calendar</button></div></div>${data.venue.note ? `<p class="travel-note">${text(data.venue.note)}</p>` : ''}</section>
+      <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>`<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name">${text(event.title)}</span></li>`).join('')}</ol>${data.wedding.scheduleNote ? `<p class="schedule-note">${text(data.wedding.scheduleNote)}</p>` : ''}</section>
+      <section class="paper-section venue-section torn" aria-labelledby="venue-title">
+        <h2 class="script reveal" id="venue-title">Where we celebrate</h2>
+        <img class="venue-scene reveal" src="${asset('hero-first.webp')}" alt="" loading="lazy">
+        ${data.venue.sceneCaption ? `<p class="venue-caption">${text(data.venue.sceneCaption)}</p>` : ''}
+        <div class="location-frame reveal">
+          <h3 class="venue-name">${text(data.venue.name)}</h3>
+          <div class="rule" aria-hidden="true"></div>
+          <address class="venue-address">${data.venue.address.split('\n').map(l=>text(l)).join('<br>')}</address>
+          <p class="venue-time">${data.venue.timeLabel.split('\n').map(l=>text(l)).join('<br>')}</p>
+          ${data.venue.mapsEmbed ? `
+          <div class="venue-map-embed">
+            <iframe src="${text(safeURL(data.venue.mapsEmbed))}" width="100%" height="220" style="border:0;border-radius:14px;display:block;margin:18px 0 14px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of ${text(data.venue.name)}"></iframe>
+          </div>
+          ` : ''}
+          <div class="actions">
+            <a class="action" id="maps" target="_blank" rel="noopener noreferrer">Open in maps</a>
+            <button class="action secondary" id="calendar">Add to calendar</button>
+          </div>
+        </div>
+        ${data.venue.note ? `<p class="travel-note">${text(data.venue.note)}</p>` : ''}
+      </section>
       <section class="paper-section floral etiquette" aria-label="Guest details">${data.details.dressCode ? `<article class="reveal"><h2 class="script">Dress code</h2><p>${text(data.details.dressCode)}</p></article>` : ''}${data.details.dressCode && data.details.giftPreference ? `<div class="rule" aria-hidden="true"></div>` : ''}${data.details.giftPreference ? `<article class="reveal"><h2 class="script">Your presence, our present</h2><p>${text(data.details.giftPreference)}</p></article>` : ''}</section>
       <footer class="closing" aria-labelledby="closing-title">
         <div class="closing-scene">

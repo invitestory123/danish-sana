@@ -8,8 +8,8 @@ window.WEDDING_DATA = {
     "groomFull": "Danish Raza Khan",
     "brideFull": "Sana Fatima",
     "groomParents": "son of Farha & Sajid Raza Khan",
-    "brideParents": "daughter of Md Nasim Khan & Syeda Fatima",
-    "heroNote": "Together with our families",
+    "brideParents": "daughter of Syeda Fatima & Md Nasim Khan",
+    "heroNote": "",
     "subtitle": "In sha Allah · as per programme"
   },
   "wedding": {
@@ -21,34 +21,31 @@ window.WEDDING_DATA = {
     "salutation": "Dear Family & Friends,",
     "invitationNote": "With the grace of Almighty Allah, we cordially invite you to share in the joy and blessings of the Wedding Reception of our beloved children Danish Raza Khan and Sana Fatima. Your gracious presence, heartfelt prayers, and warm wishes will make our celebration truly blessed and memorable.",
     "scheduleTitle": "Wedding Celebrations",
-    "scheduleNote": "All times are local to the venue. In sha Allah, as per programme.",
+    "scheduleNote": "",
     "countdownTitle": "Until the celebration begins",
     "blessing": "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
     "blessingTranslation": "In the name of Allah, the most merciful & beneficent",
     "elders": "Mehrunnisa Khanam & Ahmad Raza Khan",
     "eldersNote": "The family of",
     "invitationRequest": "request the honour of your presence at the Reception of",
-    "programmeNote": "In sha Allah · as per programme"
+    "programmeNote": ""
   },
   "schedule": [
     {
-      "title": "Nikah Ceremony · Medina",
+      "title": "Nikah · Al-Masjid an-Nabawī, Medina",
       "time": "11 Dec"
     },
     {
-      "title": "Wedding Ceremony · Durgapur",
-      "time": "17 Dec"
-    },
-    {
-      "title": "Grand Reception · Shangri-La (7 PM)",
+      "title": "Reception · Shangri-La Palace, Patna",
       "time": "21 Dec"
     }
   ],
   "venue": {
     "name": "Shangri-La Palace",
-    "address": "Bailey Rd, opp. CISRO Hospital, near Saguna More, Shri Krishna Puram, Patna, Bihar 801503",
+    "address": "Bailey Rd, opp. CISRO Hospital, near Saguna More, Shri Krishna Puram,\nPatna, Bihar 801503",
     "mapsUrl": "https://maps.app.goo.gl/5qRPxVA8zGQNAUM49?g_st=ic",
-    "timeLabel": "Monday, 21 December · 7:00 PM onwards",
+    "mapsEmbed": "https://maps.google.com/maps?q=Shangri-La+Palace+Bailey+Rd+opp+CISRO+Hospital+Saguna+More+Patna+Bihar+801503&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    "timeLabel": "Monday, 21 December\n7:00 PM onwards",
     "sceneCaption": "",
     "note": ""
   },
