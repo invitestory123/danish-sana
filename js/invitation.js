@@ -28,7 +28,7 @@
         <video class="hero-video" id="hero-video" muted loop playsinline preload="none" hidden></video>
         <div class="hero-copy"><p class="occasion">${text(data.wedding.occasion || 'The wedding celebration of')}</p><p class="date">${text(data.wedding.dateLabel)}</p>
           <h1 class="names" id="names" tabindex="-1"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></h1>
-          <p class="hero-note">${text(data.couple.heroNote)}</p><a class="hero-link" href="#our-invitation">You are cordially invited</a>
+          <p class="hero-note">${text(data.couple.heroNote)}</p>
         </div>
       </section>
       <section class="paper-section floral intro" id="our-invitation" aria-label="Our invitation">
@@ -40,20 +40,8 @@
           <h3 class="elders-names">${text(data.wedding.elders)}</h3>
         </div>
         ` : ''}
-        ${(data.couple.groomParents || data.couple.brideParents || data.couple.groomParentsNames) ? `
+        ${(data.couple.groomParents || data.couple.brideParents) ? `
         <div class="family-intro reveal">
-          <p class="family-honorific">${text(data.wedding.familyNote || 'Invited by the Parents')}</p>
-          <div class="parents-inviting-grid">
-            <div class="parent-side">
-              <h3 class="parent-name">${text(data.couple.groomParentsNames || data.couple.groomParents || '')}</h3>
-              <p class="parent-role">Parents of Groom</p>
-            </div>
-            <div class="family-conjunction" aria-hidden="true"><i>&amp;</i></div>
-            <div class="parent-side">
-              <h3 class="parent-name">${text(data.couple.brideParentsNames || data.couple.brideParents || '')}</h3>
-              <p class="parent-role">Parents of Bride</p>
-            </div>
-          </div>
           <p class="invitation-request">${text(data.wedding.invitationRequest || 'request the honour of your presence at the Reception of')}</p>
           <div class="honored-couple-grid">
             <div class="couple-side">
@@ -82,13 +70,6 @@
       <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>`<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name">${text(event.title)}</span></li>`).join('')}</ol><p class="schedule-note">${text(data.wedding.scheduleNote)}</p></section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title"><h2 class="script reveal" id="venue-title">Where we celebrate</h2><img class="venue-scene reveal" src="${asset('hero-first.webp')}" alt="" loading="lazy">${data.venue.sceneCaption ? `<p class="venue-caption">${text(data.venue.sceneCaption)}</p>` : ''}<div class="location-frame reveal"><h3 class="venue-name">${text(data.venue.name)}</h3><div class="rule" aria-hidden="true"></div><address class="venue-address">${text(data.venue.address)}</address><p>${text(data.venue.timeLabel)}</p><div class="actions"><a class="action" id="maps" target="_blank" rel="noopener noreferrer">Open in maps</a><button class="action secondary" id="calendar">Add to calendar</button></div></div>${data.venue.note ? `<p class="travel-note">${text(data.venue.note)}</p>` : ''}</section>
       <section class="paper-section floral etiquette" aria-label="Guest details">${data.details.dressCode ? `<article class="reveal"><h2 class="script">Dress code</h2><p>${text(data.details.dressCode)}</p></article>` : ''}${data.details.dressCode && data.details.giftPreference ? `<div class="rule" aria-hidden="true"></div>` : ''}${data.details.giftPreference ? `<article class="reveal"><h2 class="script">Your presence, our present</h2><p>${text(data.details.giftPreference)}</p></article>` : ''}</section>
-      ${data.media.invitationCard ? `
-      <section class="paper-section floral card-section" aria-label="Wedding Invitation Card">
-        <div class="invitation-card-wrapper reveal">
-          <img class="invitation-card-img" src="${text(safeURL(data.media.invitationCard))}" alt="Wedding Reception Invitation Card" loading="lazy">
-        </div>
-      </section>
-      ` : ''}
       <footer class="closing" aria-labelledby="closing-title">
         <div class="closing-scene">
           <img class="closing-art" src="${data.media.heroPoster ? text(safeURL(data.media.heroPoster)) : asset('hero-first.webp')}" alt="" width="720" height="1280" loading="lazy" decoding="async">
@@ -97,7 +78,6 @@
             <h2 class="closing-title" id="closing-title">Awaiting your<br><em>gracious presence</em></h2>
             <div class="closing-rule" aria-hidden="true"></div>
             <p class="closing-names"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></p>
-            ${(data.couple.groomParentsNames || data.couple.brideParentsNames) ? `<p class="closing-parents">${text(data.couple.groomParentsNames || '')} &amp; ${text(data.couple.brideParentsNames || '')}</p>` : ''}
             <p class="closing-date">${text(data.wedding.dateLabel)}</p>
           </div>
         </div>

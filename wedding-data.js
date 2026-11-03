@@ -9,9 +9,7 @@ window.WEDDING_DATA = {
     "brideFull": "Sana Fatima",
     "groomParents": "son of Farha & Sajid Raza Khan",
     "brideParents": "daughter of Md Nasim Khan & Syeda Fatima",
-    "groomParentsNames": "Farha & Sajid Raza Khan",
-    "brideParentsNames": "Md Nasim Khan & Syeda Fatima",
-    "heroNote": "Invited with love by Farha & Sajid Raza Khan and Md Nasim Khan & Syeda Fatima",
+    "heroNote": "Together with our families",
     "subtitle": "In sha Allah · as per programme"
   },
   "wedding": {
@@ -30,7 +28,6 @@ window.WEDDING_DATA = {
     "elders": "Mehrunnisa Khanam & Ahmad Raza Khan",
     "eldersNote": "The family of",
     "invitationRequest": "request the honour of your presence at the Reception of",
-    "familyNote": "Invited by the Parents of Bride & Groom",
     "programmeNote": "In sha Allah · as per programme"
   },
   "schedule": [
@@ -60,7 +57,6 @@ window.WEDDING_DATA = {
     "giftPreference": "Your warm presence and heartfelt prayers are our most treasured gifts."
   },
   "media": {
-    "invitationCard": "./assets/invitation-card.png",
     "openingVideo": "./media/opening.mp4",
     "openingPoster": "./media/opening-poster.webp",
     "heroVideo": "./media/hero.mp4",
