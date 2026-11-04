@@ -93,7 +93,7 @@
           <img class="closing-art" src="${data.media.heroPoster ? text(safeURL(data.media.heroPoster)) : asset('hero-first.webp')}" alt="" width="720" height="1280" loading="lazy" decoding="async">
           <div class="closing-copy reveal">
             <p class="closing-eyebrow">With warm blessings</p>
-            <h2 class="closing-title" id="closing-title">Awaiting your<br><em>gracious presence</em></h2>
+            <h2 class="closing-title" id="closing-title">Awaiting your<br>gracious presence</h2>
             <div class="closing-rule" aria-hidden="true"></div>
             <p class="closing-names">${data.couple.closingNames ? `<span>${text(data.couple.closingNames)}</span>` : `<span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span>`}</p>
             <p class="closing-date">${text(data.wedding.dateLabel)}</p>
