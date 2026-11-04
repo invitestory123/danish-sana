@@ -65,10 +65,10 @@
       <section class="paper-section countdown-section torn" aria-labelledby="countdown-title"><h2 class="script" id="countdown-title">${text(data.wedding.countdownTitle || 'Until our celebration begins')}</h2>
         <div class="countdown" id="countdown" role="timer" aria-label="Time until the wedding"><div><strong data-count="days">00</strong><span>Days</span></div><div><strong data-count="hours">00</strong><span>Hours</span></div><div><strong data-count="minutes">00</strong><span>Minutes</span></div><div><strong data-count="seconds">00</strong><span>Seconds</span></div></div><p class="countdown-note" id="countdown-note">${text(data.wedding.longDate)}</p>
       </section>
-      <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>`<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name">${text(event.title)}</span></li>`).join('')}</ol>${data.wedding.scheduleNote ? `<p class="schedule-note">${text(data.wedding.scheduleNote)}</p>` : ''}</section>
+      <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>{const[evName,...evAddr]=String(event.title).split('·');return `<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name"><span class="event-title">${text(evName.trim())}</span>${evAddr.length?`<span class="event-place">${text(evAddr.join('·').trim())}</span>`:''}</span></li>`}).join('')}</ol>${data.wedding.scheduleNote ? `<p class="schedule-note">${text(data.wedding.scheduleNote)}</p>` : ''}</section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title">
         <h2 class="script reveal" id="venue-title">Where we celebrate</h2>
-        <img class="venue-scene reveal" src="${asset('hero-first.webp')}" alt="" loading="lazy">
+        <img class="venue-scene reveal" src="./media/venue-shangri-la.jpg" alt="Shangri-La Palace, Patna" loading="lazy">
         ${data.venue.sceneCaption ? `<p class="venue-caption">${text(data.venue.sceneCaption)}</p>` : ''}
         <div class="location-frame reveal">
           <h3 class="venue-name">${text(data.venue.name)}</h3>
