@@ -5,6 +5,7 @@ window.WEDDING_DATA = {
   "couple": {
     "first": "Danish",
     "second": "Sana",
+    "closingNames": "Raza Family",
     "groomFull": "Danish Raza Khan",
     "brideFull": "Sana Fatima",
     "groomParents": "son of Farha & Sajid Raza Khan",

@@ -67,7 +67,7 @@
       </section>
       <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>{const[evName,...evAddr]=String(event.title).split('·');return `<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name"><span class="event-title">${text(evName.trim())}</span>${evAddr.length?`<span class="event-place">${text(evAddr.join('·').trim())}</span>`:''}</span></li>`}).join('')}</ol>${data.wedding.scheduleNote ? `<p class="schedule-note">${text(data.wedding.scheduleNote)}</p>` : ''}</section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title">
-        <h2 class="script reveal" id="venue-title">Where we celebrate</h2>
+        <h2 class="script reveal" id="venue-title">Venue</h2>
         <img class="venue-scene reveal" src="./media/venue-shangri-la.jpg" alt="Shangri-La Palace, Patna" loading="lazy">
         ${data.venue.sceneCaption ? `<p class="venue-caption">${text(data.venue.sceneCaption)}</p>` : ''}
         <div class="location-frame reveal">
@@ -92,10 +92,10 @@
         <div class="closing-scene">
           <img class="closing-art" src="${data.media.heroPoster ? text(safeURL(data.media.heroPoster)) : asset('hero-first.webp')}" alt="" width="720" height="1280" loading="lazy" decoding="async">
           <div class="closing-copy reveal">
-            <p class="closing-eyebrow">With warm blessings &amp; prayers</p>
+            <p class="closing-eyebrow">With warm blessings</p>
             <h2 class="closing-title" id="closing-title">Awaiting your<br><em>gracious presence</em></h2>
             <div class="closing-rule" aria-hidden="true"></div>
-            <p class="closing-names"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></p>
+            <p class="closing-names">${data.couple.closingNames ? `<span>${text(data.couple.closingNames)}</span>` : `<span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span>`}</p>
             <p class="closing-date">${text(data.wedding.dateLabel)}</p>
           </div>
         </div>
