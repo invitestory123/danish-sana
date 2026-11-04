@@ -6,9 +6,9 @@ window.WEDDING_DATA = {
     "first": "Danish",
     "second": "Sana",
     "groomFull": "Danish Raza Khan",
-    "brideFull": "Sana Fatima",
-    "groomParents": "son of Farha & Sajid Raza Khan",
-    "brideParents": "daughter of Syeda Fatima & Md Nasim Khan",
+    "brideFull": "Sana Fatma",
+    "groomParents": "son of FARHA & SAJID RAZA KHAN",
+    "brideParents": "daughter of SYEDA FATMA & MD NASIM KHAN",
     "heroNote": "",
     "subtitle": "In sha Allah · as per programme"
   },
@@ -19,11 +19,14 @@ window.WEDDING_DATA = {
     "dateISO": "2026-12-21T19:00:00+05:30",
     "endISO": "2026-12-21T23:30:00+05:30",
     "salutation": "Dear Family & Friends,",
-    "invitationNote": "With the grace of Almighty Allah, we cordially invite you to share in the joy and blessings of the Wedding Reception of our beloved children Danish Raza Khan and Sana Fatima. Your gracious presence, heartfelt prayers, and warm wishes will make our celebration truly blessed and memorable.",
+    "invitationNote": "With the grace of Almighty Allah, we cordially invite you to share in the joy and blessings of the Wedding Reception of our beloved children Danish Raza Khan and Sana Fatma. Your gracious presence, heartfelt prayers, and warm wishes will make our celebration truly blessed and memorable.",
     "scheduleTitle": "Wedding Celebrations",
     "scheduleNote": "",
     "countdownTitle": "Until the celebration begins",
+    "venueTitle": "The Reception Venue",
+    "closingFamily": "Raza Family",
     "blessing": "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
+  "prayer": "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
     "blessingTranslation": "In the name of Allah, the most merciful & beneficent",
     "elders": "Mehrunnisa Khanam & Ahmad Raza Khan",
     "eldersNote": "The family of",
@@ -32,17 +35,17 @@ window.WEDDING_DATA = {
   },
   "schedule": [
     {
-      "title": "Nikah · Al-Masjid an-Nabawī, Medina",
-      "time": "11 Dec"
+      "title": "Nikah\nAl-Masjid an-Nabawī\nMedina",
+      "time": "11th Dec"
     },
     {
-      "title": "Reception · Shangri-La Palace, Patna",
-      "time": "21 Dec"
+      "title": "Reception\nShangri-La Palace\nPatna",
+      "time": "21st Dec"
     }
   ],
   "venue": {
     "name": "Shangri-La Palace",
-    "address": "Bailey Rd, opp. CISRO Hospital, near Saguna More, Shri Krishna Puram,\nPatna, Bihar 801503",
+    "address": "Bailey Rd, opp. CISRO Hospital,\nNear Saguna More, Shri Krishna Puram,\nPatna, Bihar 801503",
     "mapsUrl": "https://maps.app.goo.gl/5qRPxVA8zGQNAUM49?g_st=ic",
     "mapsEmbed": "https://maps.google.com/maps?q=Shangri-La+Palace+Bailey+Rd+opp+CISRO+Hospital+Saguna+More+Patna+Bihar+801503&t=&z=15&ie=UTF8&iwloc=&output=embed",
     "timeLabel": "Monday, 21 December\n7:00 PM onwards",
