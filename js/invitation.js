@@ -65,7 +65,7 @@
       </section>
       <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>`<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name">${text(event.title)}</span></li>`).join('')}</ol>${data.wedding.scheduleNote ? `<p class="schedule-note">${text(data.wedding.scheduleNote)}</p>` : ''}</section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title">
-        <h2 class="script reveal" id="venue-title">Where we celebrate</h2>
+        <h2 class="script reveal" id="venue-title">${text(data.wedding.venueTitle || 'The Reception Venue')}</h2>
         <img class="venue-scene reveal" src="${asset('hero-first.webp')}" alt="" loading="lazy">
         ${data.venue.sceneCaption ? `<p class="venue-caption">${text(data.venue.sceneCaption)}</p>` : ''}
         <div class="location-frame reveal">

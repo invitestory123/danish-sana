@@ -14,7 +14,7 @@ window.WEDDING_DATA = {
   },
   "wedding": {
     "occasion": "The Wedding Reception of",
-    "dateLabel": "21 · 12 · 2026",
+    "dateLabel": "11th & 21st Dec 2026",
     "longDate": "Monday, 21 December 2026",
     "dateISO": "2026-12-21T19:00:00+05:30",
     "endISO": "2026-12-21T23:30:00+05:30",
@@ -45,7 +45,7 @@ window.WEDDING_DATA = {
   ],
   "venue": {
     "name": "Shangri-La Palace",
-    "address": "Bailey Rd, opp. CISRO Hospital,\nNear Saguna More, Shri Krishna Puram,\nPatna, Bihar 801503",
+    "address": "Bailey Rd, opp. CISRO Hospital,\nNear Saguna,\nMore, Shri Krishna Puram,\nPatna, Bihar 801503",
     "mapsUrl": "https://maps.app.goo.gl/5qRPxVA8zGQNAUM49?g_st=ic",
     "mapsEmbed": "https://maps.google.com/maps?q=Shangri-La+Palace+Bailey+Rd+opp+CISRO+Hospital+Saguna+More+Patna+Bihar+801503&t=&z=15&ie=UTF8&iwloc=&output=embed",
     "timeLabel": "Monday, 21 December\n7:00 PM onwards",
