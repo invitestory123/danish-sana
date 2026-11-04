@@ -60,7 +60,7 @@ window.WEDDING_DATA = {
     "openingVideo": "./media/opening.mp4",
     "openingPoster": "./media/opening-poster.webp",
     "heroVideo": "./media/hero.mp4",
-    "heroPoster": "./media/hero-poster.webp",
+    "heroPoster": "./media/high_res_hero.jpg",
     "music": "./media/music.mp3",
     "musicTitle": "Enchanted Journey",
     "musicSource": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100799"
