@@ -5,8 +5,10 @@
   const root = document.documentElement;
   ['paper','ink','accent'].forEach(key => root.style.setProperty(`--${key}`, theme[key]));
   const asset = name => `./assets/${name.replace(/\.(png|jpe?g)$/, '.webp')}`;
-  root.style.setProperty('--botanical', `url("${asset('botanical.webp')}")`);
-  root.style.setProperty('--timeline-flower', 'url("./assets/timeline-flower.webp")');
+  // Absolute URLs: a relative url() set here would be re-resolved against the
+  // stylesheet that substitutes the variable (css/invitation.css), 404ing on /css/assets/.
+  root.style.setProperty('--botanical', `url("${new URL(asset('botanical.webp'), document.baseURI).href}")`);
+  root.style.setProperty('--timeline-flower', `url("${new URL('./assets/timeline-flower.webp', document.baseURI).href}")`);
   document.body.classList.add(`theme-${data.theme}`, 'locked');
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const safeURL = value => { try { const u = new URL(value, location.href); return ['http:','https:','file:'].includes(u.protocol) ? u.href : ''; } catch { return ''; } };
@@ -27,7 +29,7 @@
         <img class="hero-art" src="${data.media.heroPoster ? text(safeURL(data.media.heroPoster)) : asset('hero-first.webp')}" alt="${text(theme.scene)}" decoding="async">
         <video class="hero-video" id="hero-video" muted loop playsinline preload="none" hidden></video>
         <div class="hero-copy"><p class="occasion">${text(data.wedding.occasion || 'The wedding celebration of')}</p><p class="date">${text(data.wedding.dateLabel)}</p>
-          <h1 class="names" id="names" tabindex="-1"><span>${text(data.couple.groomFull)}</span><i>&amp;</i><span>${text(data.couple.brideFull)}</span></h1>
+          <h1 class="names" id="names" tabindex="-1"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></h1>
           ${data.couple.heroNote ? `<p class="hero-note">${text(data.couple.heroNote)}</p>` : ''}
         </div>
       </section>
@@ -65,7 +67,7 @@
       </section>
       <section class="paper-section floral schedule-section" aria-labelledby="schedule-title"><h2 class="script reveal" id="schedule-title">${text(data.wedding.scheduleTitle || 'Wedding Celebrations')}</h2><ol class="timeline">${data.schedule.map(event=>`<li class="reveal"><time>${text(event.time)}</time><span class="event-marker" aria-hidden="true"></span><span class="event-name">${text(event.title)}</span></li>`).join('')}</ol>${data.wedding.scheduleNote ? `<p class="schedule-note">${text(data.wedding.scheduleNote)}</p>` : ''}</section>
       <section class="paper-section venue-section torn" aria-labelledby="venue-title">
-        <h2 class="script reveal" id="venue-title">${text(data.wedding.venueTitle || 'The Reception Venue')}</h2>
+        <h2 class="script reveal" id="venue-title">Where we celebrate</h2>
         <img class="venue-scene reveal" src="${asset('hero-first.webp')}" alt="" loading="lazy">
         ${data.venue.sceneCaption ? `<p class="venue-caption">${text(data.venue.sceneCaption)}</p>` : ''}
         <div class="location-frame reveal">
