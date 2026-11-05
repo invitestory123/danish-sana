@@ -9,7 +9,7 @@ window.WEDDING_DATA = {
     "groomFull": "Danish Raza Khan",
     "brideFull": "Sana Fatma",
     "groomParents": "son of Farha & Sajid Raza Khan",
-    "brideParents": "daughter of Syeda Fatima & Md Nasim Khan",
+    "brideParents": "daughter of Syeda Fatma & Md Nasim Khan",
     "heroNote": "",
     "subtitle": "In sha Allah · as per programme"
   },
