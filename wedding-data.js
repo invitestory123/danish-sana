@@ -7,7 +7,7 @@ window.WEDDING_DATA = {
     "second": "Sana",
     "closingNames": "Raza Family",
     "groomFull": "Danish Raza Khan",
-    "brideFull": "Sana Fatima",
+    "brideFull": "Sana Fatma",
     "groomParents": "son of Farha & Sajid Raza Khan",
     "brideParents": "daughter of Syeda Fatima & Md Nasim Khan",
     "heroNote": "",
@@ -19,8 +19,8 @@ window.WEDDING_DATA = {
     "longDate": "Monday, 21 December 2026",
     "dateISO": "2026-12-21T19:00:00+05:30",
     "endISO": "2026-12-21T23:30:00+05:30",
-    "salutation": "Dear Family & Friends,",
-    "invitationNote": "With the grace of Almighty Allah, we cordially invite you to share in the joy and blessings of the Wedding Reception of our beloved children Danish Raza Khan and Sana Fatima. Your gracious presence, heartfelt prayers, and warm wishes will make our celebration truly blessed and memorable.",
+    "salutation": "Dear Family and Friends,",
+    "invitationNote": "With the grace and countless blessings of Almighty Allah, we are delighted to invite you to celebrate the Wedding Reception of our beloved children Danish & Sana.\n\nAs they embark upon a beautiful journey of love, companionship, and togetherness, we would be honoured to have you join us on this joyous occasion.\n\nYour gracious presence, heartfelt prayers, and warm wishes will add to the happiness of this special day and make our celebration truly memorable.",
     "scheduleTitle": "Wedding Celebrations",
     "scheduleNote": "",
     "countdownTitle": "Until the celebration begins",
@@ -33,11 +33,11 @@ window.WEDDING_DATA = {
   },
   "schedule": [
     {
-      "title": "Nikah · Al-Masjid an-Nabawī, Medina",
+      "title": "Nikah · Al-Masjid an-Nabawī,\nMedina",
       "time": "11 Dec"
     },
     {
-      "title": "Reception · Shangri-La Palace, Patna",
+      "title": "Reception · Shangri-La Palace,\nPatna",
       "time": "21 Dec"
     }
   ],
