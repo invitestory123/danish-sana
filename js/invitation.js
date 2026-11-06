@@ -27,7 +27,7 @@
       <section class="hero" aria-label="Wedding invitation">
         <img class="hero-art" src="${data.media.heroPoster ? text(safeURL(data.media.heroPoster)) : asset('hero-first.webp')}" alt="${text(theme.scene)}" decoding="async">
         <video class="hero-video" id="hero-video" muted loop playsinline preload="none" hidden></video>
-        <div class="hero-copy"><p class="occasion">${text(data.wedding.occasion || 'The wedding celebration of')}</p><p class="date">${text(data.wedding.dateLabel)}</p>
+        <div class="hero-copy"><p class="occasion">${text(data.wedding.occasion || 'The wedding celebration of')}</p>
           <h1 class="names" id="names"><span>${text(data.couple.first)}</span><i>&amp;</i><span>${text(data.couple.second)}</span></h1>
           ${data.couple.heroNote ? `<p class="hero-note">${text(data.couple.heroNote)}</p>` : ''}
         </div>
@@ -99,7 +99,7 @@
         <div class="closing-colophon">
           <button class="reopen" id="reopen">Open the envelope again <span aria-hidden="true">↺</span></button>
           <a class="dearly-signature" href="../" aria-label="Explore Dearly wedding invitations">Dearly<small>Made for your forever</small></a>
-          ${data.media.music && data.media.musicTitle ? `<p class="music-credit">Music: <a href="${text(safeURL(data.media.musicSource))}" target="_blank" rel="noopener noreferrer">${text(data.media.musicTitle)}</a><br>Kevin MacLeod · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a><br><small>Volume adjusted · soft fade-in</small></p>` : ''}
+          ${data.media.music && data.media.musicTitle ? `<p class="music-credit">Music: <a href="${text(safeURL(data.media.musicSource))}" target="_blank" rel="noopener noreferrer">${text(data.media.musicTitle)}</a><br><small>Instrumental background soundtrack</small></p>` : ''}
         </div>
       </footer>
     </main>

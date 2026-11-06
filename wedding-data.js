@@ -20,7 +20,7 @@ window.WEDDING_DATA = {
     "dateISO": "2026-12-21T19:30:00+05:30",
     "endISO": "2026-12-21T23:30:00+05:30",
     "salutation": "Dear Family and Friends,",
-    "invitationNote": "With the grace and countless blessings of Almighty Allah, we are delighted to invite you to celebrate the Wedding Reception of our beloved children Danish & Sana.\n\nAs they embark upon a beautiful journey of love, companionship, and togetherness, we would be honoured to have you join us on this joyous occasion.\n\nYour gracious presence, heartfelt prayers, and warm wishes will add to the happiness of this special day and make our celebration truly memorable.",
+    "invitationNote": "With the grace and countless blessings of Almighty Allah, we are delighted to invite you to celebrate the Wedding Reception of our beloved children, Danish & Sana.\n\nAs they embark upon a beautiful journey of love, companionship, and togetherness, we would be honoured to have you join us on this joyous occasion.\n\nYour gracious presence, heartfelt prayers, and warm wishes will add to the happiness of this special day and make our celebration truly memorable.",
     "scheduleTitle": "Wedding Celebrations",
     "scheduleNote": "",
     "countdownTitle": "Until the celebration begins",
@@ -60,7 +60,7 @@ window.WEDDING_DATA = {
     "heroVideo": "./media/hero.mp4",
     "heroPoster": "./media/hero-poster.webp",
     "music": "./media/music.mp3",
-    "musicTitle": "Enchanted Journey",
-    "musicSource": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100799"
+    "musicTitle": "Sanson Ki Mala (Violin Cover) · Leo Twins",
+    "musicSource": "https://music.youtube.com/watch?v=4jKkT3d8gdI"
   }
 };
